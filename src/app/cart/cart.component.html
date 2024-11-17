@@ -1,0 +1,40 @@
+<div class="allCenter" xmlns="http://www.w3.org/1999/html">
+  <h1>cart works!</h1>
+  <div class="flex">
+    <form
+      [formGroup]="personForm"
+      (ngSubmit)="formSubmit()"
+    >
+      <div *ngFor="let i of templateData">
+        <div>
+          <label>{{ i?.name }} </label><br/>
+          <input [type]="i?.type" [name]="i.name" [id]="i.name" [formControlName]="i.name"/>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <h5>All Person Data</h5>
+  <h3> {{ JSON.stringify(allPersonData$ | async) }} </h3>
+  <table border="2">
+    <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Password</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of allPersonData$ | async ">
+      <td>{{ i.username }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{ i.age }}</td>
+      <td>{{ i.password }}</td>
+      <td (click)="deleteRecord(i.username)" >Delete Data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

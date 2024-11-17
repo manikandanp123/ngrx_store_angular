@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+.text-center {
+  text-align: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.header {
+  color: red;
+  background: yellow;
+  padding: 2rem;
+}
+
+.footer {
+  background: red;
+  color: yellow;
+  padding: 2rem;
+}
+
+.allCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.increment {
+  background: green;
+}
+
+.decrement {
+  background: red;
+}
+
+.reset {
+  background: yellow;
+}
+
+.increment, .decrement, .reset {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}

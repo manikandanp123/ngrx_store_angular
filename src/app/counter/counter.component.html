@@ -1,0 +1,11 @@
+<h2 class="text-center"> Counter - {{ count$ | async }} </h2>
+<div class="flex gap-4">
+  <button (click)="increment()" class="increment">Increment</button>
+  <button (click)="decrement()" class="decrement">Decrement</button>
+  <button (click)="reset()" class="reset">Reset</button>
+</div>
+
+
+<div>
+  <p>Dropdown Data is {{ dropdown$ | async }} </p>
+</div>
