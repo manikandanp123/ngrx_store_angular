@@ -12,4 +12,5 @@ import {CounterComponent} from "./counter/counter.component";
 })
 export class AppComponent {
   title = 'ngrx_learning';
+  console.log("test...")
 }
