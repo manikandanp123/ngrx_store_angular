@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns" [style.width.px]="column.width">
+        {{ column.name }}
+        <span
+          class="resize-handle"
+          (mousedown)="onResizeStart($event, column)"
+        ></span>
+      </th>
+    </tr>
+  </thead>
+</table>

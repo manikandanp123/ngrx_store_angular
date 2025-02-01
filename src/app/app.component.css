@@ -1,0 +1,48 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on mobile */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Optional, for cleaner borders */
+  table-layout: fixed; /* Fix the table layout to have equal column width or set column widths */
+}
+
+/* Column width (can be adjusted or customized as needed) */
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text from wrapping in cells */
+}
+
+/* Example of resizing columns (use fixed widths for specific columns) */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 10px; /* Resize 1st column */
+  overflow: hidden;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 250px; /* Resize 2nd column */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 300px; /* Resize 3rd column */
+}
+
+/* Optional: styling for header */
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+th{
+    resize: horizontal;
+    overflow: auto;
+}
